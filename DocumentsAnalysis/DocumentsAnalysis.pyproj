@@ -1,0 +1,218 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7c7ee762-bbb8-422d-9acf-2f830c41bdf9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>DocumentsAnalysis.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DocumentsAnalysis</Name>
+    <RootNamespace>DocumentsAnalysis</RootNamespace>
+    <InterpreterId>MSBuild|mymlenv|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleOutput\CoreFunctions.py" />
+    <Compile Include="ConsoleOutput\PrintFunctions.py" />
+    <Compile Include="ConsoleOutput\__init__.py" />
+    <Compile Include="DocumentsAnalysis.py" />
+    <Compile Include="GUI\UserInterface.py" />
+    <Compile Include="GUI\__init__.py" />
+    <Compile Include="ModelLearning\config.py" />
+    <Compile Include="ModelLearning\DatasetLoader.py" />
+    <Compile Include="ModelLearning\ModelTrainer.py" />
+    <Compile Include="ModelLearning\__init__.py" />
+    <Compile Include="PreProcessing\CreateAnnotation.py" />
+    <Compile Include="PreProcessing\BalanceDataset.py" />
+    <Compile Include="PreProcessing\PDFExtract.py" />
+    <Compile Include="PreProcessing\ShowPatches.py" />
+    <Compile Include="PreProcessing\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="annotations\" />
+    <Folder Include="annotations\test_set\" />
+    <Folder Include="annotations\test_set\forged\" />
+    <Folder Include="annotations\test_set\genuine\" />
+    <Folder Include="annotations\training_set\" />
+    <Folder Include="annotations\training_set\forged\" />
+    <Folder Include="annotations\training_set\genuine\" />
+    <Folder Include="annotations\validation_set\" />
+    <Folder Include="annotations\validation_set\forged\" />
+    <Folder Include="annotations\validation_set\genuine\" />
+    <Folder Include="ModelLearning\" />
+    <Folder Include="ConsoleOutput\" />
+    <Folder Include="GUI\" />
+    <Folder Include="PreProcessing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\mymlenv\">
+      <Id>mymlenv</Id>
+      <Version>3.10</Version>
+      <Description>mymlenv (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="annotations\test_set\forged\f_doc_1_32.json" />
+    <Content Include="annotations\test_set\forged\f_doc_1_33.json" />
+    <Content Include="annotations\test_set\forged\f_doc_1_35.json" />
+    <Content Include="annotations\test_set\forged\f_doc_2_15.json" />
+    <Content Include="annotations\test_set\forged\f_doc_2_17.json" />
+    <Content Include="annotations\test_set\forged\f_doc_2_2.json" />
+    <Content Include="annotations\test_set\forged\f_doc_2_4.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_100.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_15.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_86.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_87.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_88.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_89.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_90.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_91.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_92.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_93.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_94.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_96.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_97.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_98.json" />
+    <Content Include="annotations\test_set\genuine\g_doc_99.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_1.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_10.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_11.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_12.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_13.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_14.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_15.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_16.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_17.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_18.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_19.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_2.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_20.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_21.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_22.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_23.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_24.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_25.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_26.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_27.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_28.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_3.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_4.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_5.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_6.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_7.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_8.json" />
+    <Content Include="annotations\training_set\forged\f_doc_1_9.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_1.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_10.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_11.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_12.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_13.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_14.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_17.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_18.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_19.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_2.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_20.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_21.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_22.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_23.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_24.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_25.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_26.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_27.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_28.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_29.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_3.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_30.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_31.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_32.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_33.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_34.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_35.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_36.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_37.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_38.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_39.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_4.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_40.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_41.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_42.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_43.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_44.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_45.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_46.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_47.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_48.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_49.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_5.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_50.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_51.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_52.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_54.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_55.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_56.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_57.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_58.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_59.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_6.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_60.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_61.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_62.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_63.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_64.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_65.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_66.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_67.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_68.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_69.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_7.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_8.json" />
+    <Content Include="annotations\training_set\genuine\g_doc_9.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_1_29.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_1_30.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_1_31.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_2_11.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_2_12.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_2_13.json" />
+    <Content Include="annotations\validation_set\forged\f_doc_2_14.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_71.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_72.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_73.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_74.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_75.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_76.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_77.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_78.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_79.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_80.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_81.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_82.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_83.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_84.json" />
+    <Content Include="annotations\validation_set\genuine\g_doc_85.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
