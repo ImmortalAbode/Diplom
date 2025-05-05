@@ -1,0 +1,58 @@
+{
+    "run_path": "./runs\\2025-05-04_16-48-27",
+    "model": {
+        "architecture": "resnet50",
+        "base_weights": "IMAGENET1K_V1",
+        "unfrozen_layers": [
+            "layer4",
+            "fc"
+        ],
+        "num_classes": 2,
+        "input_size": [
+            3,
+            224,
+            224
+        ],
+        "device": "cpu",
+        "prev_epochs": 15,
+        "add_epochs": 0,
+        "loss_fn": "CrossEntropyLoss",
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.001,
+            "betas": [
+                0.9,
+                0.999
+            ],
+            "weight_decay": 0.01
+        },
+        "scheduler": {
+            "type": "ReduceLROnPlateau",
+            "mode": "min",
+            "factor": 0.5,
+            "patience": 2,
+            "threshold": 0.0001
+        }
+    },
+    "training": {
+        "batch_size": 32,
+        "use_amp": null,
+        "cuDNN": false
+    },
+    "dataset": {
+        "train_forged_path": "./dataset_patches/training_set/forged",
+        "train_genuine_path": "./dataset_patches/training_set/genuine",
+        "test_forged_path": "./dataset_patches/test_set/forged",
+        "test_genuine_path": "./dataset_patches/test_set/genuine",
+        "validation_forged_path": "./dataset_patches/validation_set/forged",
+        "validation_genuine_path": "./dataset_patches/validation_set/genuine",
+        "class_names": [
+            "genuine",
+            "forged"
+        ],
+        "augmentation": true,
+        "train_size": 46670,
+        "val_size": 4911,
+        "test_size": 5662
+    }
+}
