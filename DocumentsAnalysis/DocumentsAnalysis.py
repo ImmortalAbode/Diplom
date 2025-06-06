@@ -30,6 +30,8 @@ def main():
                 pf.print_info_information("Вы выбрали режим 'Пользователь'.", end='\n\n')
                 pf.print_line()
                 run_gui()
+                if not all_opt:
+                    exit()
 
             elif mode == '0':
                 print("Завершение программы...", end='\n\n')
