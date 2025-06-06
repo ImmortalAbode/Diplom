@@ -1,7 +1,7 @@
 from ConsoleOutput import PrintFunctions as pf
 from ConsoleOutput import CoreFunctions as cf
-
 from GUI import run_gui
+import sys
 
 # Идея обучения модели:
 # ------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ def main():
     else:
         run_gui()
 
-    exit()
+    sys.exit()
 
 # Запуск программы.
 if __name__ == "__main__":
